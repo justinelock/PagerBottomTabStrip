@@ -10,14 +10,13 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="48dp" />
 
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_gravity="bottom"
-        android:background="@android:color/transparent"
-        />
+        android:background="@android:color/transparent" />
 
 </FrameLayout>

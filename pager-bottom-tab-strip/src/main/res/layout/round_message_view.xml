@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round"
         android:gravity="center"
-        android:minHeight="20dp"
         android:minWidth="20dp"
+        android:minHeight="20dp"
         android:singleLine="true"
         android:textColor="@android:color/white"
         android:visibility="invisible" />

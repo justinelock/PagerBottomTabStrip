@@ -10,15 +10,13 @@
     <ScrollView
         android:layout_width="75dp"
         android:layout_height="match_parent"
-        android:elevation="8dp"
         android:background="@drawable/tab_background"
-        >
+        android:elevation="8dp">
 
         <me.majiajie.pagerbottomtabstrip.PageNavigationView
             android:id="@+id/tab"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </ScrollView>
 

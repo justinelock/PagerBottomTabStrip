@@ -40,7 +40,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'me.majiajie:pager-bottom-tab-strip:2.4.0'
+  implementation 'me.majiajie:pager-bottom-tab-strip:2.4.1'
 }
 ```
 

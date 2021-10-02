@@ -10,11 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"/>
+            app:layout_scrollFlags="scroll|enterAlways" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -25,12 +26,11 @@
 
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
         android:id="@+id/tab"
-        android:elevation="8dp"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/tab_background"
-        app:layout_behavior="me.majiajie.pagerbottomtabstriptest.behavior.BottomViewBehavior"
-        />
+        android:elevation="8dp"
+        app:layout_behavior="me.majiajie.pagerbottomtabstriptest.behavior.BottomViewBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
