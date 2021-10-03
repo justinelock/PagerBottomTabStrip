@@ -4,12 +4,17 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
+
+import me.majiajie.pagerbottomtabstrip.R;
+import me.majiajie.pagerbottomtabstrip.internal.RoundMessageView;
+import me.majiajie.pagerbottomtabstrip.internal.Utils;
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
-import me.majiajie.pagerbottomtabstriptest.R;
 
 /**
  * 自定义一个只有图标的Item
@@ -20,7 +25,8 @@ public class OnlyIconItemView extends BaseTabItem {
 
     private Drawable mDefaultDrawable;
     private Drawable mCheckedDrawable;
-
+    private RoundMessageView mMessages;
+    private int chekedColor = 0;
     private boolean mChecked;
 
     public OnlyIconItemView(Context context) {
@@ -37,11 +43,19 @@ public class OnlyIconItemView extends BaseTabItem {
         LayoutInflater.from(context).inflate(R.layout.item_only_icon, this, true);
 
         mIcon = findViewById(R.id.icon);
+        mMessages = findViewById(R.id.messages);
     }
 
     public void initialize(@DrawableRes int drawableRes, @DrawableRes int checkedDrawableRes) {
         mDefaultDrawable = ContextCompat.getDrawable(getContext(), drawableRes);
         mCheckedDrawable = ContextCompat.getDrawable(getContext(), checkedDrawableRes);
+        //mCheckedDrawable =  Utils.tinting(mCheckedDrawable, 0xFF00796B);
+    }
+
+    public void initialize(@DrawableRes int drawableRes, @DrawableRes int checkedDrawableRes, @ColorInt int chekedColor) {
+        mDefaultDrawable = ContextCompat.getDrawable(getContext(), drawableRes);
+        mCheckedDrawable = ContextCompat.getDrawable(getContext(), checkedDrawableRes);
+        mCheckedDrawable =  Utils.tinting(mCheckedDrawable, chekedColor);
     }
 
     @Override
@@ -53,6 +67,12 @@ public class OnlyIconItemView extends BaseTabItem {
     @Override
     public void setMessageNumber(int number) {
         //不需要就不用管
+        mMessages.setVisibility(View.VISIBLE);
+        mMessages.setMessageNumber(number);
+    }
+
+    public void setMessageNumber(int index, int number) {
+
     }
 
     @Override
@@ -78,6 +98,8 @@ public class OnlyIconItemView extends BaseTabItem {
         mCheckedDrawable = drawable;
         if (mChecked) {
             mIcon.setImageDrawable(drawable);
+        } else {
+            mIcon.setImageDrawable(Utils.tinting(drawable, chekedColor));
         }
     }
 
