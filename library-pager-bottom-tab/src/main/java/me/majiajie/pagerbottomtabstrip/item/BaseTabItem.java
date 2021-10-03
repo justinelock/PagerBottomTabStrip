@@ -1,6 +1,5 @@
 package me.majiajie.pagerbottomtabstrip.item;
 
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -65,7 +64,8 @@ public abstract class BaseTabItem extends FrameLayout {
     /**
      * 已选中的状态下再次点击时触发
      */
-    public void onRepeat() {}
+    public void onRepeat() {
+    }
 
 
 }

@@ -1,10 +1,10 @@
 package me.majiajie.pagerbottomtabstrip;
 
-
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
+
 import me.majiajie.pagerbottomtabstrip.internal.Utils;
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
@@ -51,17 +51,17 @@ public class NavigationController implements ItemController, BottomLayoutControl
     }
 
     @Override
-    public void setTitle(int index,@NonNull String title) {
+    public void setTitle(int index, @NonNull String title) {
         mItemController.setTitle(index, title);
     }
 
     @Override
-    public void setDefaultDrawable(int index,@NonNull Drawable drawable) {
+    public void setDefaultDrawable(int index, @NonNull Drawable drawable) {
         mItemController.setDefaultDrawable(index, drawable);
     }
 
     @Override
-    public void setSelectedDrawable(int index,@NonNull Drawable drawable) {
+    public void setSelectedDrawable(int index, @NonNull Drawable drawable) {
         mItemController.setSelectedDrawable(index, drawable);
     }
 
@@ -86,12 +86,12 @@ public class NavigationController implements ItemController, BottomLayoutControl
     }
 
     @Override
-    public void addMaterialItem(int index,@NonNull Drawable defaultDrawable,@NonNull Drawable selectedDrawable,@NonNull String title, int selectedColor) {
+    public void addMaterialItem(int index, @NonNull Drawable defaultDrawable, @NonNull Drawable selectedDrawable, @NonNull String title, int selectedColor) {
         mItemController.addMaterialItem(index, Utils.newDrawable(defaultDrawable), Utils.newDrawable(selectedDrawable), title, selectedColor);
     }
 
     @Override
-    public void addCustomItem(int index,@NonNull BaseTabItem item) {
+    public void addCustomItem(int index, @NonNull BaseTabItem item) {
         mItemController.addCustomItem(index, item);
     }
 

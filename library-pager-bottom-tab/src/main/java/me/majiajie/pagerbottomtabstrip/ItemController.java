@@ -1,6 +1,5 @@
 package me.majiajie.pagerbottomtabstrip;
 
-
 import android.graphics.drawable.Drawable;
 
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;

@@ -21,6 +21,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
+
 import me.majiajie.pagerbottomtabstrip.internal.CustomItemLayout;
 import me.majiajie.pagerbottomtabstrip.internal.CustomItemVerticalLayout;
 import me.majiajie.pagerbottomtabstrip.internal.MaterialItemLayout;

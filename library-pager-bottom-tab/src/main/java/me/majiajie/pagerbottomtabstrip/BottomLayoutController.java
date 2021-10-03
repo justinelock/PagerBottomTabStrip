@@ -1,6 +1,5 @@
 package me.majiajie.pagerbottomtabstrip;
 
-
 import androidx.viewpager.widget.ViewPager;
 
 interface BottomLayoutController {

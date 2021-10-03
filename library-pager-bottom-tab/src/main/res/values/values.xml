@@ -16,4 +16,6 @@
         <attr name="NavigationPaddingBottom" format="dimension"/>
     </declare-styleable>
 
+    <attr format="reference" name="selectableItemBackground"/>
+
 </resources>

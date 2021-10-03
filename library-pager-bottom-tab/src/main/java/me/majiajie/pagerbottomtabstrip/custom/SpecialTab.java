@@ -1,20 +1,26 @@
-package me.majiajie.pagerbottomtabstrip.item;
+package me.majiajie.pagerbottomtabstrip.custom;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import me.majiajie.pagerbottomtabstrip.R;
 import me.majiajie.pagerbottomtabstrip.internal.RoundMessageView;
+import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
 
-public class NormalItemView extends BaseTabItem {
+/**
+ * Created by mjj on 2017/6/3
+ */
+public class SpecialTab extends BaseTabItem {
 
     private ImageView mIcon;
     private final TextView mTitle;
@@ -28,18 +34,18 @@ public class NormalItemView extends BaseTabItem {
 
     private boolean mChecked;
 
-    public NormalItemView(Context context) {
+    public SpecialTab(Context context) {
         this(context, null);
     }
 
-    public NormalItemView(Context context, AttributeSet attrs) {
+    public SpecialTab(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public NormalItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SpecialTab(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        LayoutInflater.from(context).inflate(R.layout.item_normal, this, true);
+        LayoutInflater.from(context).inflate(R.layout.special_tab, this, true);
 
         mIcon = findViewById(R.id.icon);
         mTitle = findViewById(R.id.title);
@@ -47,8 +53,11 @@ public class NormalItemView extends BaseTabItem {
     }
 
     @Override
-    public CharSequence getAccessibilityClassName() {
-        return NormalItemView.class.getName();
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        View view = getChildAt(0);
+        if (view != null) {
+            view.setOnClickListener(l);
+        }
     }
 
     /**

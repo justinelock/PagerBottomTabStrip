@@ -1,6 +1,5 @@
 package me.majiajie.pagerbottomtabstrip;
 
-
 /**
  * <p>模式选择。</p>
  * <p>采用组合的形式，比如要两种效果可以这样做：</p>
